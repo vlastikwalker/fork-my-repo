@@ -1,0 +1,5 @@
+bind       = "unix:/nginx_sockets/hello_world.sock"
+user       = "nginx"
+logto      = "/var/log/bento/hello_world_access.log"
+errorlog   = "/var/log/bento/hello_world_error.log"
+root_path  = "/hello_world"

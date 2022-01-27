@@ -1,0 +1,5 @@
+bind       = "unix:/nginx_sockets/root_app.sock"
+user       = "nginx"
+logto      = "/var/log/bento/root_app_access.log"
+errorlog   = "/var/log/bento/root_app_error.log"
+root_path  = "/root_app"

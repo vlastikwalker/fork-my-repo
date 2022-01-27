@@ -1,0 +1,13 @@
+[Unit]
+Description=Hypercorn instance for Fast API experiment
+After=network.target
+
+[Service]
+User=nginx
+Group=nginx
+WorkingDirectory=/var/www/modules/example_api
+Environment="PATH=/var/www/modules/example_api"
+ExecStart=/usr/local/bin/hypercorn example_api.py --reload --config example_api.toml
+
+[Install]
+WantedBy=multi-user.target

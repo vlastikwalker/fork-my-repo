@@ -1,0 +1,13 @@
+[Unit]
+Description=Hypercorn instance for Fast API experiment
+After=network.target
+
+[Service]
+User=nginx
+Group=nginx
+WorkingDirectory=/var/www/modules/hello_world
+Environment="PATH=/var/www/modules/hello_world"
+ExecStart=/usr/local/bin/hypercorn hello_world.py --reload --config hello_world.toml
+
+[Install]
+WantedBy=multi-user.target
