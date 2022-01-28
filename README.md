@@ -1,36 +1,99 @@
-<h1 align="center">
-  <a href="https://github.com/johnzech/bento-box"><img src="static/image/Bento.png" alt="lad" width="50%" /></a>
-</h1>
+<div id="top"></div>
 
-# bento-box
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-A python web developer's box of goodies.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/vlastikczech/fork-my-repo">
+    <img src="static/image/android.png" alt="Logo" width="80" height="80">
+  </a>
 
-<a href="https://www.buymeacoffee.com/humanitydriven"><img src="https://img.shields.io/badge/buymeacoffee- -brightgreen" alt="code-size"/></a><img src="https://img.shields.io/github/languages/code-size/johnzech/bento-box" alt="code-size"/><a href="LICENSE"><img src="https://img.shields.io/github/license/johnzech/bento-box.svg" alt="license" /></a>
+  <h3 align="center">Fork My Repo</h3>
+
+  <p align="center">
+    A web application that allows you to fork your own repository!
+    <br />
+    <br />
+    <a href="https://github.com/vlastikczech/fork-my-repo/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/vlastikczech/fork-my-repo/issues">Request Feature</a>
+  </p>
+</div>
 
 ## Table of Contents
+<!-- TABLE OF CONTENTS -->
+<details>
+    <summary>Table of Contents</summary>
+        <ol>
+            <li>
+                <a href="#about-the-project">About The Project</a>
+                <ul>
+                    <li><a href="#built-with">Built With</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#getting-started">Getting Started</a>
+            </li>
+            <li>
+                <a href="#setup">Setup</a>
+                <ul>
+                    <li><a href="#set-up-the-vagrant-box">Set up the Vagrant Box</a></li>
+                    <li><a href="#ssh-to-the-machine">SSH to the machine</a></li>
+                    <li><a href="#putty-setup-(optional)">Putty setup (optional)</a></li>
+                    <li><a href="#install-on-aws,-google,-digital-ocean,-etc">Install on AWS, Google, Digital Ocean, etc</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#other-deets">Other Deets</a>
+                <ul>
+                    <li><a href="#architecture">Architecture</a></li>
+                </ul>
+            </li>
+            <li><a href="#license">License</a></li>
+            <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-* [Getting Started](#getting-started)
-* [Setup](#setup)
-  * [Set up the Vagrant Box](#set-up-the-vagrant-box)
-  * [SSH to the machine](#ssh-to-the-machine)
-  * [Putty setup (optional)](#putty-setup-(optional))
-  * [Install on AWS, Google, Digital Ocean, etc](#install-on-aws,-google,-digital-ocean,-etc)
-* [Build Something Neat](#build-something-neat)
-  * [Vagrant up gets you...](#vagrant-up-gets-you...)
-  * [Creating a new module](#creating-a-new-module)
-  * [Creating a new db schema](#creating-a-new-db-schema)
-  * [Creating a new cron job](#creating-a-new-cron-job)
-  * [Note on db versioning/migrations](#note-on-db-versioning/migrations)
-* [Other Deets](#other-deets)
-  * [Architecture](#architecture)
-  * [License](#license)
+<!-- ABOUT THE PROJECT -->
+## About The Project
+![Product Name Screen Shot][product-screenshot]
 
+Sometimes it's a struggle to share your forks with others.. this project does just that!
+
+This project utilizies a template called [bento-reloaded](https://github.com/PHX-Devs/bento-reloaded), and has been simplified based on the project's requirements.  
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Built With
+
+* [Fast API](https://fastapi.tiangolo.com/)
+* [Bootstrap](https://getbootstrap.com)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 ## Getting Started
-Bento is a "template repository." To build something using Bento, use it as a template to create your own repository with all of the same files (but without the git commit history and branches). Click the "use this template" button in github or [click here](https://github.com/PHX-Devs/bento-reloaded/generate).
 
-Once you have your own repo, clone it locally as you normally would and continue to the setup steps below. Once installed, you'll be ready to build something neat within Bento!
+### Prerequisites
+This project uses Vagrant for building and managing virtual machine environments in a single workflow. https://www.vagrantup.com/downloads
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- SETUP -->
 ## Setup
 
 ### Set Up the Vagrant box
@@ -65,70 +128,24 @@ To Convert:
 2. clone repo in /var/www/modules 
 2. run `install.sh` 
 
-## Build Something Neat
-Once installed, explore the built-in examples and build something of your own!
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### What you get  
-```sh 
-vagrant up
-```  
-Gets you...
-* almalinux
-* all rpms updated
-* python38 installed
-* fastapi installed
-* hypercorn installed
-* postgres 13 and postgis 3 installed
-    * also a starter database called 'bento' and a schema called test
-* migra installed
-* empty 'root_app' module listening on the '/' path
-* hello world fastapi app installed and configured in nginx
-* example api module installed (with an actual database schema behind it)
+<!-- USAGE EXAMPLES -->
+## Usage
 
-### Creating a new module
-**for the sake of example, we'll act like we're adding a module named 'carbs'
-1. create a new dir in the root of this repo (/carbs/)
-2. make sure it has the following (probably best to copy one of the examples)
-    * \_\_init\_\_.py (empty - if you're reading this in an editor... otherwise known as __init__.py)
-    * carbs.py (main fastapi app here)
-    * carbs.toml ( hypercorn config items)
-    * carbs.service (systemd service file)
-    * carbs_conf_d.conf (nginx config file (conf.d dir) - loaded outside of the server directive)
-    * carbs.conf (nginx config file (default.d dir) - loaded inside of the server directive)
-    * ./templates/ dir (optional, if your module has a web ui)
-**If copy/pasting, make sure to review each of the above files
-3. add a line to /provision/modules.sh for your new carbs module
-    * will run next time your vagrant box provisions
-    * to run the provision step manually (just for your module), comment out accordingly and run modules.sh
-    * this step:
-        * installs your module as a uwsgi proc running as a service
-        * adds the nginx config to the appropriate dir
-    * systemctl command will match the filename of your .service file (systemctl start carbs)
-4. restart nginx
-    * 'systemctl restart nginx
+### Tests
+When running tests make sure that you have SSH into the vagrant box before proceeding with these steps.
+1. CD into the modules directory
+    ```sh
+    cd /var/www/modules
+   ```
+2. Run pytest
+    ```sh
+    pytest
+   ```
 
-### Creating a new db schema
-**for the sake of example, we'll act like we're adding a schema named 'carbs'
-1. add a schema create file in the db dir (/db/carbs_schema.sql)
-    * this file should start with 'CREATE SCHEMA carbs;'
-2. add a line to /provision/schemas.sh
-    * runuser -l postgres -c "psql -U bento -f /var/www/modules/db/carbs_schema.sql"
-    * note: this will install the carbs schema to the bento database - if you've created your own database, use that
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Creating a new cron job
-**for the sake of example, we'll act like we're adding a cron named 'carbs'
-1. create the new dir in `/crons/carbs`
-2. make sure it has the following (probably best to copy the example_cron)
-    * carbs.logrotate
-    * carbs.py (main python cron job)
-3. add a line to `/crons/crontab` (make sure that there is a newline at the end of the file)
-    * in our case `*/1 * * * * cd /var/www/modules/crons/carbs && /bin/python3 /var/www/modules/crons/carbs/carbs.py >> /var/log/carbs/carbs.log`
-4. add a line to `/provision/crons.sh` 
-    * `crons+=(carbs)`
-
-### Note on db versioning/migrations
-Bento does not solve for db versioning at the moment. But it does include migra, a db diff tool. That's a good start toward a sane db "non-versioning" scheme.
-Read up on it here: https://djrobstep.com/docs/migra/quickstart
 
 ## Other Deets
 
@@ -142,77 +159,74 @@ tree
 
 ```sh
 .
-├── config.py
-├── crons
-│   ├── crontab
-│   └── example_cron
-│       ├── example_cron.logrotate
-│       ├── example_cron.py
-│       └── say_hello.py
-├── db
-│   ├── create_database.sql
-│   └── test_schema.sql
-├── example_api
-│   ├── example_api.conf
-│   ├── example_api_conf_d.conf
-│   ├── example_api.py
-│   ├── example_api.service
-│   ├── example_api.toml
-│   └── __init__.py
 ├── generate_putty_key.bat
-├── hello_world
-│   ├── hello_world.conf
-│   ├── hello_world_conf_d.conf
-│   ├── hello_world.py
-│   ├── hello_world.service
-│   ├── hello_world.toml
-│   ├── __init__.py
-│   └── templates
-│       └── hello_world.html
 ├── __init__.py
 ├── install.sh
 ├── LICENSE
 ├── provision
-│   ├── crons.sh
-│   ├── dev_env.sh
-│   ├── enable_ssl.sh
-│   ├── modules.sh
-│   ├── nginx_conf
-│   ├── nginx.sh
-│   ├── packages.sh
-│   ├── postgres.sh
-│   ├── schemas.sh
-│   └── static.conf
+│   ├── dev_env.sh
+│   ├── enable_ssl.sh
+│   ├── logrotate.conf
+│   ├── modules.sh
+│   ├── nginx_conf
+│   ├── nginx.sh
+│   ├── packages.sh
+│   ├── static.conf
+│   └── tests.conf
 ├── README.md
 ├── root_app
-│   ├── __init__.py
-│   ├── root_app.conf
-│   ├── root_app_conf_d.conf
-│   ├── root_app.py
-│   ├── root_app.service
-│   ├── root_app.toml
-│   ├── templates
-│   │   ├── base_template.html
-│   │   └── index.html
-│   └── wsgi.py
+│   ├── __init__.py
+│   ├── root_app.conf
+│   ├── root_app_conf_d.conf
+│   ├── root_app.py
+│   ├── root_app.service
+│   ├── root_app.toml
+│   ├── templates
+│   │   ├── base_template.html
+│   │   └── index.html
+│   └── wsgi.py
 ├── static
-│   ├── css
-│   │   └── root.css
-│   ├── favicon.ico
-│   └── image
-│       ├── Bento.png
-│       └── title_logo.png
-├── utils
-│   ├── db.py
-│   ├── __init__.py
-│   └── __pycache__
-│       ├── db.cpython-36.pyc
-│       ├── db.cpython-38.pyc
-│       ├── __init__.cpython-36.pyc
-│       └── __init__.cpython-38.pyc
+│   ├── css
+│   │   └── root.css
+│   ├── favicon.ico
+│   └── image
+├── tests
+│   ├── __init__.py
+│   └── test_root_app.py
 └── Vagrantfile
-14 directories, 55 files
+8 directories, 27 files
 ```
 
-### License
-[MIT](LICENSE) © John Zechlin
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [John Zechlin](https://www.linkedin.com/in/john-zechlin/)
+* [Phx Devs](https://phxdevs.com/)
+* [Bento Reloaded](https://github.com/PHX-Devs/bento-reloaded)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/vlastikczech/fork-my-repo.svg?style=for-the-badge
+[contributors-url]: https://github.com/vlastikczech/fork-my-repo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/vlastikczech/fork-my-repo?style=for-the-badge
+[forks-url]: https://github.com/vlastikczech/fork-my-repoe/network/members
+[stars-shield]: https://img.shields.io/github/stars/vlastikczech/fork-my-repo.svg?style=for-the-badge
+[stars-url]: https://github.com/vlastikczech/fork-my-repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/vlastikczech/fork-my-repo.svg?style=for-the-badge
+[issues-url]: https://github.com/vlastikczech/fork-my-repo/issues
+[license-shield]: https://img.shields.io/github/license/vlastikczech/fork-my-repo.svg?style=for-the-badge
+[license-url]: https://github.com/vlastikczech/fork-my-repo/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/vlastik-walker-57a229153/
+[product-screenshot]: static/image/product_screenshot.png
