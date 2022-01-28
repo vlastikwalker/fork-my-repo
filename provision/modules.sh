@@ -1,8 +1,6 @@
 # array of module names to install on the system
 modules=()
 modules+=(root_app)
-modules+=(hello_world)
-modules+=(example_api)
 # add your new module by adding a line here
 #modules+=(your_new_module_here)
 
