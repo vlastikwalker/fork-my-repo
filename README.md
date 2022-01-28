@@ -74,7 +74,7 @@
 
 Sometimes it's a struggle to share your forks with others.. this project does just that!
 
-This project utilizies a template called [bento-reloaded](https://github.com/PHX-Devs/bento-reloaded), and has been simplified based on the project's requirements.  
+This project utilizes a template called [bento-reloaded](https://github.com/PHX-Devs/bento-reloaded), and has been simplified based on the project's requirements.  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
