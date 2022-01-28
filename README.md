@@ -190,11 +190,13 @@ tree
 │   │   └── root.css
 │   ├── favicon.ico
 │   └── image
+│       ├── android.png
+│       └── product_screenshot.png
 ├── tests
 │   ├── __init__.py
 │   └── test_root_app.py
 └── Vagrantfile
-8 directories, 27 files
+8 directories, 29 files
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
